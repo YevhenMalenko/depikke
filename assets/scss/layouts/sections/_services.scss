@@ -1,0 +1,149 @@
+.services {
+    padding-top: 114px;
+    padding-bottom: 199px;
+
+    @media (max-width: $lg) {
+        padding-top: 90px;
+        padding-bottom: 120px;
+    }
+
+    @media (max-width: $md) {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .section-title {
+        @include fadeInUp();
+    }
+
+    .text {
+        @include fadeInUp();
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 29px 46px;
+        margin-top: 76px;
+
+        @media (max-width: $lg) {
+            margin-top: 45px;
+            gap: 25px;
+        }
+    }
+    .service-card {
+        @include fadeInUp();
+
+        max-width: 48%;
+        max-width: calc(50% - 23px);
+        width: 100%;
+
+        @media (max-width: $lg) {
+            max-width: 70%;
+            margin: 0px auto;
+        }
+        @media (max-width: $md) {
+            max-width: 100%;
+        }
+
+        &-thumbnail {
+            display: flex;
+            width: 100%;
+            height: 284px;
+            overflow: hidden;
+
+            @media (max-width: $sm) {
+                height: 220px;
+            }
+
+            @media (max-width: $xs) {
+                height: 180px;
+            }
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+            img {
+                width: 100%;
+                object-fit: cover;
+                transition:  all .3s ease;
+            }
+        }
+        &-content {
+            min-height: 282px;
+            background-color: rgba($gray, .2);
+            padding: 48px 63px;
+            text-align: center;
+
+            @media (max-width: $xl) {
+                padding: 40px 35px;
+            }
+            @media (max-width: $lg) {
+                min-height: auto;
+            }
+
+            @media (max-width: $md) {
+                padding: 30px 15px;
+            }
+
+            @media (max-width: $xs) {
+                padding: 28px 10px;
+            }
+        }
+        &__title {
+            text-transform: uppercase;
+            font-size: 17px;
+            line-height: 21px;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            color: $green;
+
+            @media (max-width: $md) {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            
+            a {
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+        &__description {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            color: $black;
+            margin-bottom: 20px;
+
+            @media (max-width: $md) {
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+        }
+    }
+    .service-image {
+        @include fadeInUp();
+        max-width: 48%;
+        max-width: calc(50% - 23px);
+        width: 100%;
+        height: 566px;
+        object-fit: cover;
+
+        @media (max-width: $lg) {
+            max-width: 70%;
+            margin: 0px auto;
+            height: 400px;
+        }
+
+        @media (max-width: $md) {
+            max-width: 100%;
+            height: 300px;
+        }
+
+        @media (max-width: $sm) {
+            height: 220px;
+        }
+    }
+}

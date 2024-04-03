@@ -1,0 +1,125 @@
+.pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.62);
+    z-index: 9999;
+    display: none;
+    &-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-content {
+        background-color: $white;
+        margin: 0 auto;
+        max-width: 881px;
+        padding: 94px 105px;
+        height: 90%;
+        position: relative;
+        overflow-y: auto;
+
+        @media (max-width: $xxl) {
+            padding: 45px 105px;
+        }
+
+        @media (max-width: $xl) {
+            padding: 40px 50px;
+        }
+
+        @media (max-width: $lg) {
+            max-width: 100%;
+            height: 100%;
+            padding: 90px 15px 40px 15px;
+        }
+
+        .content {
+            padding: 0px;
+        }
+    }
+    &-header {
+        @media (max-width: $lg) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: $white;
+            height: 40px;
+            box-shadow: 0px 2px 2px rgba($black, .25);
+        }
+    }
+    &-close {
+        position: absolute;
+        right: 25px;
+        top: 19px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L13 13M13 1L1 13' stroke='%23000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 12px;
+        height: 12px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        @media (max-width: $lg) {
+            top: 14px;
+        }
+    }
+
+    &-logo {
+        text-align: center;
+        margin-bottom: 37px;
+
+        @media (max-width: $xl) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $md) {
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 294px;
+            width: 100%;
+
+            @media (max-width: $md) {
+                max-width: 220px;
+            }
+        }
+    }
+
+    &-image {
+        margin-bottom: 37px;
+
+        @media (max-width: $xl) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-title {
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba($black, .25);
+        margin-bottom: 20px;
+
+        @media (max-width: $lg) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.admin-bar  {
+    .pop-up-header {
+        top: 32px;
+        @media (max-width: 782px) {
+            top: 46px;
+        }
+
+    }
+}

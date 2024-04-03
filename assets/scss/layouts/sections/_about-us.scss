@@ -1,0 +1,214 @@
+.about-us {
+    padding-top: 53px;
+    padding-bottom: 58px;
+    position: relative;
+    overflow: hidden;
+
+    
+    @media (max-width: $md) {
+        padding-top: 40px;
+        padding-bottom: 0px;
+    }
+
+    &.media-boxed {
+        .about-us-row {
+            &.media-left {
+                .about-us-content {
+                    max-width: 45%;
+
+                    @media (max-width: $lg) {
+                        max-width: 47%;
+                    }
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                        margin-bottom: 30px;
+                    }
+
+                    @media (max-width: $xs) {
+                        margin-bottom: 25px;
+                    }
+                }
+
+                .about-us-images {
+                    max-width: 49%;
+                    order: -1;
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                        order: 2;
+                    }
+                }
+            }
+
+            &.media-right {
+                .about-us-images {
+                    max-width: 45%;
+
+                    @media (max-width: $lg) {
+                        max-width: 47%;
+                    }
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                    }
+                }
+
+                .about-us-content {
+                    max-width: 49%;
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.media-full-width {
+        .about-us-row {
+            .about-us-images {
+                position: absolute;
+                top: 0px;
+                height: 100%;
+
+                @media (max-width: $md) {
+                    position: static;
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+            &.media-left {
+                .about-us-images {
+                    left: 0px;
+                    max-width: 50%;
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                    }
+                }
+
+                .about-us-content {
+                    max-width: 45%;
+                    margin-left: auto;
+                    min-height: 579px;
+
+                    @media (max-width: $lg) {
+                        max-width: 47%;
+                    }
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                        min-height: auto;
+                    }
+                }
+            }
+
+            &.media-right {
+                .about-us-content {
+                    max-width: 47%;
+                    min-height: 579px;
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                        min-height: auto;
+                    }
+                }
+
+                .about-us-images {
+                    max-width: 50%;
+                    right: 0px;
+
+                    @media (max-width: $md) {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+    
+    
+    &.bg-gray {
+        background-color: rgba($gray, .2);
+    } 
+    
+    &.show-logo {
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 54%;
+            top: 35%;
+            background-image: url(../images/overons-vector.svg);
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: contain;
+            height: 100%;
+            width: 1128px;
+            z-index: -1;
+            transform: translateX(-50%);
+
+            @media (max-width: $xl) {
+                width: 100%;
+            }
+
+            @media (max-width: $md) {
+                display: none;
+            }
+        }
+    }
+
+
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $md) {
+            flex-wrap: wrap;
+        }
+
+        .about-us-images {
+            display: flex;
+            flex-direction: column;
+            width: 100%;  
+            gap: 27px;
+            
+            @media (max-width: $md) {
+                gap: 20px;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .about-us-content {
+            width: 100%;
+
+            p {
+                margin-bottom: 25px;
+                text-align: justify;
+
+                @media (max-width: $lg) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            a {
+                color: $black1;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+}

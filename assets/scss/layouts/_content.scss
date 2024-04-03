@@ -1,0 +1,124 @@
+.content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (max-width: $lg) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    h1, h2 {
+        margin-bottom: 25px;
+        @media (max-width: $lg) {
+            margin-bottom: 16px;
+        }
+    }
+
+    h3, h4, h5, h6 {
+        margin-bottom: 19px;
+        @media (max-width: $lg) {
+            margin-bottom: 12px;
+        }
+    }
+
+    .blockquote {
+        padding-left: 40px;
+
+        @media (max-width: $lg) {
+            padding-left: 20px;
+        }
+    }
+
+
+    p {
+        text-align: justify;
+        margin-bottom: 19px;
+
+        @media (max-width: $lg) {
+            margin-bottom: 12px;
+        }
+    }
+
+    ul,
+    ol {
+        padding-left: 16px;
+        margin-bottom: 20px;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+
+    a {
+        color: $black1;
+        text-decoration: underline;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    .wp-block-columns {
+        column-gap: 60px;
+
+        @media (max-width: $xl) {
+            column-gap: 30px;
+        }
+
+        @media (max-width: $lg) {
+            column-gap: 20px;
+        }
+
+        @media (max-width: 782px) {
+            gap: 25px;
+        }
+
+        .wp-block-columns {
+            column-gap: 25px;
+
+            @media (max-width: $xl) {
+                column-gap: 15px;
+            }
+    
+            @media (max-width: 782px) {
+                gap: 20px;
+            }
+        }
+    }
+
+    .mobile-hide {
+        @media (max-width: 782px) {
+            display: none;
+        }
+    }
+
+    // .wp-block-image {
+    //     margin-bottom: 20px;
+    // }
+}
+
+.single-service {
+    .content {
+        padding-top: 106px;
+        padding-bottom: 220px;
+    
+        @media (max-width: $lg) {
+            padding-top: 60px;
+            padding-bottom: 120px;
+        }
+
+        @media (max-width: $md) {
+            padding-top: 45px;
+            padding-bottom: 60px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 22px;
+
+            @media (max-width: $lg) {
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+    }
+}

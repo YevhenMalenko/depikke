@@ -1,0 +1,114 @@
+html {
+    font-family: $inter;
+    font-weight: 400;
+    color: $black1;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+// Header Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-weight: 700;
+    margin: 0px;
+    color: $black1;
+
+    a {
+        font-weight: inherit;
+    }
+}
+h1 {
+    font-size: 25px;
+    line-height: 1.4;
+
+    @media (max-width: $md) {
+        font-size: 22px;
+    }
+
+    @media (max-width: $xs) {
+        font-size: 20px;
+    }
+}
+h2 {
+    font-size: 20px;
+    line-height: 1.2;
+
+    @media (max-width: $md) {
+        font-size: 18px;
+    }
+}
+
+h3, h4 {
+    font-size: 17px;
+    line-height: 1.23;
+
+    @media (max-width: $md) {
+        font-size: 16px;
+    }
+
+}
+
+
+h5, h6 {
+    font-size: 16px;
+    line-height: 1.25;
+
+    @media (max-width: $md) {
+        font-size: 15px;
+    }
+}
+
+
+.section-title {
+    color: $green;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    &.light {
+        color: $white;
+    }
+
+    @media (max-width: $md) {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+}
+
+// Text Styles
+p {
+    font-size: 14px;
+    line-height: 1.35;
+    margin: 0;
+}
+
+a {
+    color: $green;
+    transition: all .3s ease;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.text {
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

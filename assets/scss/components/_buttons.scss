@@ -1,0 +1,85 @@
+.button-default,
+.button-green,
+.button-orange {
+    display: inline-block;
+    font-family: $inter;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14.5px;
+    letter-spacing: 0.1em;
+    padding: 5px 12px 4px 12px;
+    background-color: transparent;
+    transition: all .3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button-default {
+    color: $white;
+    border: 1px solid $white;
+    &:hover {
+        background-color: $white;
+        color: $black1;
+    }
+}
+
+.button-green {
+    color: $green;
+    border: 1px solid $green;
+    &:hover {
+        background-color: $green;
+        color: $white;
+    }
+}
+
+.button-orange {
+    color: $orange;
+    border: 1px solid $orange;
+    &:hover {
+        background-color: $orange;
+        color: $white;
+    }
+}
+
+
+.link {
+    font-family: $inter;
+    color: $green;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    transition: all .3s ease;
+    position: relative;
+    &::after {
+        content: '>';
+        padding-left: 3px;
+    }
+
+    &:hover {
+        text-shadow: 0 0 0.65px $green, 0 0 0.65px $green;
+    }
+}
+
+
+.scroll-next {
+    border: 2px solid $white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease;
+    background-image: url("data:image/svg+xml, %3Csvg width='16' height='27' viewBox='0 0 16 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.29289 26.7071C7.68342 27.0976 8.31658 27.0976 8.70711 26.7071L15.0711 20.3431C15.4616 19.9526 15.4616 19.3195 15.0711 18.9289C14.6805 18.5384 14.0474 18.5384 13.6569 18.9289L8 24.5858L2.34315 18.9289C1.95262 18.5384 1.31946 18.5384 0.928933 18.9289C0.538409 19.3195 0.538409 19.9526 0.928933 20.3431L7.29289 26.7071ZM7 4.37114e-08L7 26L9 26L9 -4.37114e-08L7 4.37114e-08Z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: $md) {
+        width: 45px;
+        height: 45px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

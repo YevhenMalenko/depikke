@@ -1,0 +1,36 @@
+.error-404 {
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: $lg) {
+        min-height: 400px;
+    }
+
+    h1 {
+        font-size: 70px;
+
+        @media (max-width: $md) {
+            font-size: 48px;
+        }
+    }
+    h3 {
+        font-size: 45px;
+        margin-bottom: 40px;
+
+        @media (max-width: $md) {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 15px;
+
+        @media (max-width: $md) {
+            font-size: 16px;
+        }
+    }
+}
